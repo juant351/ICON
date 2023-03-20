@@ -1,0 +1,37 @@
+mueve(e0,a,[],e0,[a]).
+mueve(e0,a,X,e0,[a|X]).
+mueve(e0,b,[a|X],e1,X).
+mueve(e1,b,[a|X],e1,X).
+mueve(e1,b,[],e1,[b]).
+mueve(e1,b,X,e1,[b|X]).
+mueve(e1,c,[b|X],e2,X).
+mueve(e2,c,[b|X],e2,X).
+
+transita(e2,[],[],eF):-
+    !.
+transita(Estado,[CabezaCad|Cad],X,EstadoFinal):-
+    CabezaCad \= [],
+    mueve(Estado,CabezaCad,X,EstadoInter,XInter),
+    transita(EstadoInter,Cad,XInter,EstadoFinal).
+transita(e0,[],[],eF):-
+    !.
+
+valida(Cadena, Resultado):-
+    transita(e0,Cadena,[],EstadoFinal),
+    EstadoFinal = eF,
+    Resultado is 1,
+    !.
+
+solve(true):-
+    !.
+solve((A,B)):-
+    !,
+    solve(A),
+    solve(B).
+solve(A) :-
+    predicate_property(A,built_in),
+    !,
+    call(A).
+solve(A):-
+    clause(A,B),
+    solve(B).

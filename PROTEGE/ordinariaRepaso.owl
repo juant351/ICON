@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-17="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#fabrica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#fabrica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasCerveza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasCerveza">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasMarca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasFabrica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasFabrica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isFrom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasMarca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasMarca">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isTipo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isTipo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasGraduacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasGraduacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#CervezaDeBajaGraduacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#CervezaDeBajaGraduacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasGraduacion"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#CervezaMahou -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#CervezaMahou">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasMarca"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaDeCervezaRubia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaDeCervezaRubia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#fabrica"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isTipo"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MarcaConAlMenos2CervezasDistintas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MarcaConAlMenos2CervezasDistintas">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasCerveza"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#PaisFabricantesDeAlMenos2CervezasRubias -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#PaisFabricantesDeAlMenos2CervezasRubias">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#hasFabrica"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#fabrica"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#isTipo"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+                                    </owl:Restriction>
+                                </owl:onClass>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Negra"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tostada"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaAloevera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaAloevera">
+        <fabrica rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou5estrellas"/>
+        <fabrica rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MahouClasica"/>
+        <isFrom rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaDublin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaDublin">
+        <fabrica rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#GuinnessStout"/>
+        <isFrom rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Irlanda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMalaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMalaga">
+        <fabrica rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou5estrellas"/>
+        <isFrom rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMontemayor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMontemayor">
+        <fabrica rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MilanaTostada"/>
+        <isFrom rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Guinness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Guinness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#GuinnessStout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#GuinnessStout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Guinness"/>
+        <isTipo rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Negra"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.3</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Irlanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Irlanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou5estrellas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou5estrellas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou"/>
+        <isTipo rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.5</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MahouClasica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MahouClasica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou"/>
+        <isTipo rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Milana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Milana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MilanaTostada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MilanaTostada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Milana"/>
+        <isTipo rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tostada"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.8</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Negra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Negra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tostada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tostada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Cerveza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Fabrica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Marca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tipo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#España"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Irlanda"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaAloevera"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaDublin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMalaga"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#FabricaMontemayor"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Guinness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Milana"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#GuinnessStout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Mahou5estrellas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MahouClasica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#MilanaTostada"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Negra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Rubia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-17#Tostada"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

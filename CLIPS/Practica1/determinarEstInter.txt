@@ -1,0 +1,7 @@
+DETERMINAR ESTADO INTERMEDIO.
+
+(defrule R1
+	(comportamientoMotor observacion noArranca)
+=>
+	(assert (potencia estado desconectada))
+)

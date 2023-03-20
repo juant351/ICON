@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#"
+     xml:base="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-21="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasAlimentacion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasAlimentacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasRespiracion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasRespiracion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#isDepredadorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#isDepredadorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasPatas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasPatas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#AnimalesCarnivoros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#AnimalesCarnivoros">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasAlimentacion"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Mamifero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Mamifero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pez -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pez">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#ReptilCon4Patas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#ReptilCon4Patas">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasPatas"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#SuperDepredador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#SuperDepredador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#hasAlimentacion"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#isDepredadorOf"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Alce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Alce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Mamifero"/>
+        <hasAlimentacion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+        <hasPatas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasPatas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Oso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Oso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Mamifero"/>
+        <hasAlimentacion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+        <isDepredadorOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Rana"/>
+        <isDepredadorOf rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Salmon"/>
+        <hasPatas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasPatas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Rana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Rana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil"/>
+        <hasAlimentacion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+        <hasPatas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasPatas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pez"/>
+        <hasAlimentacion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial"/>
+        <hasPatas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</hasPatas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Serpiente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Serpiente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil"/>
+        <hasAlimentacion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro"/>
+        <hasRespiracion rdf:resource="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+        <hasPatas rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</hasPatas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Animal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoAlimenticio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#MecanismoRespiracion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Mamifero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pez"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Reptil"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Alce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Oso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Rana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Salmon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Serpiente"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Braquial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Pulmonar"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Carnivoro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Herbivoro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/juan_/ontologies/2022/1/untitled-ontology-21#Omnivoro"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

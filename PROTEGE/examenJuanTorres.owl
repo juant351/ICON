@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#"
+     xml:base="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:examenJuanTorres="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#fabricaCerveza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#fabricaCerveza">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasFabrica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasFabrica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isTipo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isTipo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasGraduacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasGraduacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaDeBajaGraduacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaDeBajaGraduacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasGraduacion"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuiness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuiness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaSegunMarca"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaSegunMarca"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaSegunMarca"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaSegunMarca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaSegunMarca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#España -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#España">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#España"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#fabricaCerveza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Cerveza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDeCervezaRubia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDeCervezaRubia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#fabricaCerveza"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Rubia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Irlanda"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#España"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#isFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#España"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#GuinessStout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#GuinessStout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guinness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guinness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Irlanda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Irlanda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaConAlMenos2CervezasDistintas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaConAlMenos2CervezasDistintas">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Marca"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasMarca"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MilanaTostada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MilanaTostada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#PaisFabricantesDeAlMenos2CervezasRubias -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#PaisFabricantesDeAlMenos2CervezasRubias">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Pais"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#hasFabrica"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaCerveza"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Negra"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Rubia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Tostada"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuinessStout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuinessStout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#GuinessStout"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.3</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou5Estrellas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou5Estrellas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.5</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahouClasica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahouClasica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilanaTostada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilanaTostada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MilanaTostada"/>
+        <hasMarca rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+        <hasGraduacion rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.8</hasGraduacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera"/>
+        <fabricaCerveza rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou5Estrellas"/>
+        <fabricaCerveza rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahouClasica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou5Estrellas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MahouClasica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#MarcaCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Negra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Negra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Rubia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Rubia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Tostada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Tostada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#TipoCerveza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuiness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilana"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guinness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaGuinessStout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahou5Estrellas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMahouClasica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#CervezaMilanaTostada"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaAlovera"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaDublin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMalaga"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#FabricaMontemayor"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Guiness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Mahou"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Milana"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Negra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Rubia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso82/ontologies/2022/0/examenJuanTorres#Tostada"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

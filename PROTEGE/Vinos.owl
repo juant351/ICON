@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#"
+     xml:base="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Vinos="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos">
+        <rdfs:comment>Ontologia sobre el mundo de los vinos para el examen final de Ingeniería del Conocimiento</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esDeTipo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esDeTipo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#TiposDeVino"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esMiembroDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esMiembroDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#perteneceA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esProducidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esProducidoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#produce"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#perteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#perteneceA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bodegas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#produce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#producenVino -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#producenVino">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bodegas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#tienenBodegasConVinoTinto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#tienenBodegasConVinoTinto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#BodegasConVinoTinto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#temperaturaDeConsumo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#temperaturaDeConsumo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bodegas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bodegas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#BodegasConVinoTinto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#BodegasConVinoTinto">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bodegas"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#producenVino"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoTinto"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionesDeOrigenConAlMenosDosFabricantesDeVinointo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionesDeOrigenConAlMenosDosFabricantesDeVinointo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#tienenBodegasConVinoTinto"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ProductorConAlMenosDosVinosDistintos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ProductorConAlMenosDosVinosDistintos">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#produce"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#TiposDeVino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#TiposDeVino">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Blanco"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoDeLopezCristobal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoDeLopezCristobal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esProducidoPor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoQueSeSirveFrio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoQueSeSirveFrio">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#temperaturaDeConsumo"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoTinto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#VinoTinto">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#esDeTipo"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bagus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bagus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+        <esDeTipo rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+        <esProducidoPor rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal"/>
+        <temperaturaDeConsumo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</temperaturaDeConsumo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Blanco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Blanco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CaminoDelPalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CaminoDelPalo">
+        <perteneceA rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Toro"/>
+        <producenVino rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#GranColegiataOriginal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CasasecaDeLasChanas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CasasecaDeLasChanas">
+        <perteneceA rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Toro"/>
+        <producenVino rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DamaDeToroMalvasina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DamaDeToroMalvasina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DamaDeToroMalvasina">
+        <esDeTipo rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+        <esProducidoPor rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Farina"/>
+        <temperaturaDeConsumo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</temperaturaDeConsumo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Diego_Rivera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Diego_Rivera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Vino"/>
+        <esDeTipo rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Blanco"/>
+        <esProducidoPor rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ServilloArranz"/>
+        <temperaturaDeConsumo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</temperaturaDeConsumo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ElCandelero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ElCandelero">
+        <perteneceA rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RiberaDeDuero"/>
+        <producenVino rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Diego_Rivera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Farina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Farina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#GranColegiataOriginal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#GranColegiataOriginal">
+        <esDeTipo rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+        <esProducidoPor rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Farina"/>
+        <temperaturaDeConsumo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</temperaturaDeConsumo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobalParcela1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobalParcela1">
+        <esDeTipo rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+        <esProducidoPor rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RiberaDeDuero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RiberaDeDuero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RoaDeDuero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RoaDeDuero">
+        <perteneceA rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RiberaDeDuero"/>
+        <producenVino rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bagus"/>
+        <producenVino rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobalParcela1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ServilloArranz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ServilloArranz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Productores"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Toro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Toro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DenominacionOrigen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bagus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#DamaDeToroMalvasina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Diego_Rivera"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#GranColegiataOriginal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobalParcela1"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Bagus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Diego_Rivera"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Blanco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Tinto"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CaminoDelPalo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#CasasecaDeLasChanas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ElCandelero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RoaDeDuero"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Farina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#LopezCristobal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#ServilloArranz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#RiberaDeDuero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/curso12/ontologies/2022/0/Vinos#Toro"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,617 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv1#"
+     xml:base="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:familiasv1="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv1#"
+     xmlns:familiasv2="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esDescendienteDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esDescendienteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esDescendienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHermanaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHermanaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneHermanamientoCon"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHermanoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHermanoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneHermanamientoCon"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esDescendienteDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:comment>esHijaDe representa la relación de una persona con género femenino y uno de sus progenitores.
+
+Esta propiedad NO puede ser Funcional, porque se puede relacionar con el padre y la madre, que son dos individuos diferentes.
+
+Esta propiedad NO puede ser Transitiva, porque solamente se es hija del antecesor inmediato.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esDescendienteDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:comment>esHijoDe representa la relación de una persona con género femenino y uno de sus progenitores.
+
+Esta propiedad NO puede ser Funcional, porque se puede relacionar con el padre y la madre, que son dos individuos diferentes.
+
+Esta propiedad NO puede ser Transitiva, porque solamente se es hija del antecesor inmediato.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMadreDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMadreDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMaridoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMaridoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esParejaDe"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMujerDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMujerDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esMujerDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esParejaDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esPadreDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esPadreDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esParejaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esParejaDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneHermanamientoCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneHermanamientoCon">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneEdad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneEdad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Genero">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Hija -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Hija">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijaDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Hijo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Hijo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esHijoDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Madre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Madre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#MenorDeEdad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#MenorDeEdad">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneEdad"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Padre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Padre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneGenero"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#ParejasConHijos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#ParejasConHijos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esParejaDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Progenitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Progenitor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#esAntecesorDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#TerceraEdad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#TerceraEdad">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#tieneEdad"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Eugenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Eugenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esMadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:esMujerDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Pedro"/>
+        <familiasv2:tieneGenero rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Juan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Juan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esMaridoDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:esPadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria"/>
+        <familiasv2:tieneGenero rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esHijaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Eugenia"/>
+        <familiasv2:esHijaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Pedro"/>
+        <familiasv2:esMadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Luis"/>
+        <familiasv2:esMadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria"/>
+        <familiasv2:esMadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Sandra"/>
+        <familiasv2:tieneGenero rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Luis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Luis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esHermanoDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria"/>
+        <familiasv2:esHijoDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Juan"/>
+        <familiasv2:esHijoDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esHijaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Pedro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esPadreDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Sandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Sandra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Persona"/>
+        <familiasv2:esHermanaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Luis"/>
+        <familiasv2:esHermanaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria"/>
+        <familiasv2:esHijaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Juan"/>
+        <familiasv2:esHijaDe rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+        <familiasv2:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</familiasv2:tieneEdad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Eugenia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Juan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Lucia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Luis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Maria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Pedro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#Sandra"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#femenino"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sergg/ontologies/2021/10/familiasv2#masculino"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
